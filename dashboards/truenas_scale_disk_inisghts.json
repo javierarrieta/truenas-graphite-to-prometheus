@@ -125,9 +125,9 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "uptime{instance=~\"$instance\"}",
+            "expr": "uptime{hostname=~\"$hostname\"}",
             "instant": false,
-            "legendFormat": "{{instance}}",
+            "legendFormat": "{{hostname}}",
             "range": true,
             "refId": "A"
           }
@@ -195,7 +195,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "uptime{instance=~\"$instance\"}",
+            "expr": "uptime{hostname=~\"$hostname\"}",
             "instant": false,
             "legendFormat": "synced",
             "range": true,
@@ -281,7 +281,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "disk_utilization{instance=~\"$instance\"}",
+            "expr": "disk_utilization{hostname=~\"$hostname\"}",
             "instant": false,
             "legendFormat": "{{disk}}",
             "range": true,
@@ -383,7 +383,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "disk_utilization{instance=~\"$instance\"}",
+            "expr": "disk_utilization{hostname=~\"$hostname\"}",
             "instant": false,
             "legendFormat": "{{disk}}",
             "range": true,
@@ -500,7 +500,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "disk_io{instance=~\"$instance\", disk=~\"$disk\"}",
+            "expr": "disk_io{hostname=~\"$hostname\", disk=~\"$disk\"}",
             "instant": false,
             "legendFormat": "{{op}}",
             "range": true,
@@ -603,7 +603,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "abs(disk_iotime{instance=~\"$instance\", disk=~\"$disk\"})",
+            "expr": "abs(disk_iotime{hostname=~\"$hostname\", disk=~\"$disk\"})",
             "instant": false,
             "legendFormat": "{{op}}",
             "range": true,
@@ -706,7 +706,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "abs(disk_io_ops{instance=~\"$instance\", disk=~\"$disk\"})",
+            "expr": "abs(disk_io_ops{hostname=~\"$hostname\", disk=~\"$disk\"})",
             "instant": false,
             "legendFormat": "{{op}}",
             "range": true,
@@ -822,7 +822,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "abs(disk_await{instance=~\"$instance\", disk=~\"$disk\"})",
+            "expr": "abs(disk_await{hostname=~\"$hostname\", disk=~\"$disk\"})",
             "instant": false,
             "legendFormat": "{{op}}",
             "range": true,
@@ -925,7 +925,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "disk_io_backlog{instance=~\"$instance\", disk=~\"$disk\"}",
+            "expr": "disk_io_backlog{hostname=~\"$hostname\", disk=~\"$disk\"}",
             "instant": false,
             "legendFormat": "backlog",
             "range": true,
@@ -937,7 +937,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "disk_busy{instance=~\"$instance\", disk=~\"$disk\"}",
+            "expr": "disk_busy{hostname=~\"$hostname\", disk=~\"$disk\"}",
             "hide": false,
             "instant": false,
             "legendFormat": "busy",
@@ -1041,7 +1041,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "disk_qops{instance=~\"$instance\", disk=~\"$disk\"}",
+            "expr": "disk_qops{hostname=~\"$hostname\", disk=~\"$disk\"}",
             "instant": false,
             "legendFormat": "value",
             "range": true,
@@ -1144,7 +1144,7 @@
               "uid": "${DS_MIMIR}"
             },
             "editorMode": "code",
-            "expr": "abs(disk_io_size{instance=~\"$instance\", disk=~\"$disk\"})",
+            "expr": "abs(disk_io_size{hostname=~\"$hostname\", disk=~\"$disk\"})",
             "instant": false,
             "legendFormat": "{{op}}",
             "range": true,
@@ -1191,15 +1191,15 @@
             "type": "prometheus",
             "uid": "${DS_MIMIR}"
           },
-          "definition": "label_values(uptime{job=\"$job\"},instance)",
+          "definition": "label_values(uptime{job=\"$job\"},hostname)",
           "hide": 0,
           "includeAll": false,
           "multi": false,
-          "name": "instance",
+          "name": "hostname",
           "options": [],
           "query": {
             "qryType": 1,
-            "query": "label_values(uptime{job=\"$job\"},instance)",
+            "query": "label_values(uptime{job=\"$job\"},hostname)",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
           "refresh": 1,
@@ -1215,7 +1215,7 @@
             "type": "prometheus",
             "uid": "${DS_MIMIR}"
           },
-          "definition": "label_values(disk_io{instance=\"$instance\", job=\"$job\"},disk)",
+          "definition": "label_values(disk_io{hostname=\"$hostname\", job=\"$job\"},disk)",
           "hide": 0,
           "includeAll": true,
           "label": "disks",
@@ -1224,7 +1224,7 @@
           "options": [],
           "query": {
             "qryType": 1,
-            "query": "label_values(disk_io{instance=\"$instance\", job=\"$job\"},disk)",
+            "query": "label_values(disk_io{hostname=\"$hostname\", job=\"$job\"},disk)",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
           "refresh": 1,

@@ -157,7 +157,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "system_load{instance=~\"$instance\"}",
+          "expr": "system_load{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{kind}}",
           "range": true,
@@ -253,7 +253,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "cpu_frequency{instance=~\"$instance\", cpu=~\"$cpu\"}",
+          "expr": "cpu_frequency{hostname=~\"$hostname\", cpu=~\"$cpu\"}",
           "instant": false,
           "legendFormat": "{{cpu}}",
           "range": true,
@@ -349,7 +349,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "cpu_temperature{instance=~\"$instance\", cpu=~\"$cpu\"}",
+          "expr": "cpu_temperature{hostname=~\"$hostname\", cpu=~\"$cpu\"}",
           "instant": false,
           "legendFormat": "{{cpu}}",
           "range": true,
@@ -419,7 +419,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "physical_memory{instance=~\"$instance\"}",
+          "expr": "physical_memory{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{kind}}",
           "range": true,
@@ -516,7 +516,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "interface_io{instance=~\"$instance\", interface=~\"$interface\"}",
+          "expr": "interface_io{hostname=~\"$hostname\", interface=~\"$interface\"}",
           "instant": false,
           "legendFormat": "{{interface}} - {{op}}",
           "range": true,
@@ -618,7 +618,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_pool{instance=~\"$instance\"} > 0",
+          "expr": "zfs_pool{hostname=~\"$hostname\"} > 0",
           "format": "table",
           "instant": false,
           "legendFormat": "{{pool}}",
@@ -738,7 +738,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "processes{instance=~\"$instance\"}",
+          "expr": "processes{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{kind}}",
           "range": true,
@@ -808,7 +808,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "uptime{instance=~\"$instance\"}",
+          "expr": "uptime{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "synced",
           "range": true,
@@ -913,7 +913,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "cpu_total{instance=~\"$instance\"}",
+              "expr": "cpu_total{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{kind}}",
               "range": true,
@@ -1008,7 +1008,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "cpu_frequency{instance=~\"$instance\", cpu=~\"$cpu\"}",
+              "expr": "cpu_frequency{hostname=~\"$hostname\", cpu=~\"$cpu\"}",
               "instant": false,
               "legendFormat": "{{cpu}}",
               "range": true,
@@ -1103,7 +1103,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "cpu_temperature{instance=~\"$instance\", cpu=~\"$cpu\"}",
+              "expr": "cpu_temperature{hostname=~\"$hostname\", cpu=~\"$cpu\"}",
               "instant": false,
               "legendFormat": "{{cpu}}",
               "range": true,
@@ -1198,7 +1198,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "avg by (state) (cpu_idlestate{instance=~\"$instance\", cpu=~\"$cpu\"})",
+              "expr": "avg by (state) (cpu_idlestate{hostname=~\"$hostname\", cpu=~\"$cpu\"})",
               "instant": false,
               "legendFormat": "{{state}}",
               "range": true,
@@ -1293,7 +1293,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "cpu_throttling{instance=~\"$instance\", cpu=~\"$cpu\"}",
+              "expr": "cpu_throttling{hostname=~\"$hostname\", cpu=~\"$cpu\"}",
               "instant": false,
               "legendFormat": "{{cpu}}",
               "range": true,
@@ -1388,7 +1388,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "interrupts{instance=~\"$instance\"}",
+              "expr": "interrupts{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{kind}} - interrupt",
               "range": true,
@@ -1400,7 +1400,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "context_switches{instance=~\"$instance\"}",
+              "expr": "context_switches{hostname=~\"$hostname\"}",
               "hide": false,
               "instant": false,
               "legendFormat": "context switches",
@@ -1485,7 +1485,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "physical_memory{instance=~\"$instance\"}",
+              "expr": "physical_memory{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{kind}}",
               "range": true,
@@ -1555,7 +1555,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "swap{instance=~\"$instance\"}",
+              "expr": "swap{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{kind}}",
               "range": true,
@@ -1650,7 +1650,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "memory_available{instance=~\"$instance\"}",
+              "expr": "memory_available{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{kind}}",
               "range": true,
@@ -1662,7 +1662,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "memory_committed{instance=~\"$instance\"}",
+              "expr": "memory_committed{hostname=~\"$hostname\"}",
               "hide": false,
               "instant": false,
               "legendFormat": "{{kind}}",
@@ -1675,7 +1675,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "memory_transparent_hugepages{instance=~\"$instance\"}",
+              "expr": "memory_transparent_hugepages{hostname=~\"$hostname\"}",
               "hide": false,
               "instant": false,
               "legendFormat": "hugepages-{{kind}}",
@@ -1688,7 +1688,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "memory_writeback{instance=~\"$instance\"}",
+              "expr": "memory_writeback{hostname=~\"$hostname\"}",
               "hide": false,
               "instant": false,
               "legendFormat": "writeback-{{kind}}",
@@ -1784,7 +1784,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "memory_kernel{instance=~\"$instance\"}",
+              "expr": "memory_kernel{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{kind}}",
               "range": true,
@@ -1879,7 +1879,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "memory_slab{instance=~\"$instance\"}",
+              "expr": "memory_slab{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{kind}}",
               "range": true,
@@ -1989,7 +1989,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "interface_io{instance=~\"$instance\", interface=~\"$interface\"}",
+              "expr": "interface_io{hostname=~\"$hostname\", interface=~\"$interface\"}",
               "instant": false,
               "legendFormat": "{{interface}} - {{op}}",
               "range": true,
@@ -2058,7 +2058,7 @@
               },
               "editorMode": "code",
               "exemplar": false,
-              "expr": "interface_speed{instance=~\"$instance\", interface=~\"$interface\"}",
+              "expr": "interface_speed{hostname=~\"$hostname\", interface=~\"$interface\"}",
               "format": "time_series",
               "instant": false,
               "legendFormat": "{{interface}}",
@@ -2157,7 +2157,7 @@
               },
               "editorMode": "code",
               "exemplar": false,
-              "expr": "interface_duplex{instance=~\"$instance\", interface=~\"$interface\"} > 0",
+              "expr": "interface_duplex{hostname=~\"$hostname\", interface=~\"$interface\"} > 0",
               "format": "time_series",
               "instant": false,
               "legendFormat": "{{interface}} - {{state}}",
@@ -2256,7 +2256,7 @@
               },
               "editorMode": "code",
               "exemplar": false,
-              "expr": "interface_operationstate{instance=~\"$instance\", interface=~\"$interface\"} > 0",
+              "expr": "interface_operationstate{hostname=~\"$hostname\", interface=~\"$interface\"} > 0",
               "format": "time_series",
               "instant": false,
               "legendFormat": "{{interface}} - {{state}}",
@@ -2355,7 +2355,7 @@
               },
               "editorMode": "code",
               "exemplar": false,
-              "expr": "interface_carrierstate{instance=~\"$instance\", interface=~\"$interface\"} > 0",
+              "expr": "interface_carrierstate{hostname=~\"$hostname\", interface=~\"$interface\"} > 0",
               "format": "time_series",
               "instant": false,
               "legendFormat": "{{interface}} - {{state}}",
@@ -2454,7 +2454,7 @@
               },
               "editorMode": "code",
               "exemplar": false,
-              "expr": "interface_mtu{instance=~\"$instance\", interface=~\"$interface\"} > 0",
+              "expr": "interface_mtu{hostname=~\"$hostname\", interface=~\"$interface\"} > 0",
               "format": "time_series",
               "instant": false,
               "legendFormat": "{{interface}}",
@@ -2551,7 +2551,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "interface_packets{instance=~\"$instance\", interface=~\"$interface\"}",
+              "expr": "interface_packets{hostname=~\"$hostname\", interface=~\"$interface\"}",
               "instant": false,
               "legendFormat": "{{interface}} - {{op}}",
               "range": true,
@@ -2647,7 +2647,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "interface_errors{instance=~\"$instance\", interface=~\"$interface\"}",
+              "expr": "interface_errors{hostname=~\"$hostname\", interface=~\"$interface\"}",
               "instant": false,
               "legendFormat": "error ({{interface}} - {{op}})",
               "range": true,
@@ -2659,7 +2659,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "interface_drops{instance=~\"$instance\", interface=~\"$interface\"}",
+              "expr": "interface_drops{hostname=~\"$hostname\", interface=~\"$interface\"}",
               "hide": false,
               "instant": false,
               "legendFormat": "drop ({{interface}} - {{op}})",
@@ -2770,7 +2770,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "processes{instance=~\"$instance\"}",
+              "expr": "processes{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{kind}}",
               "range": true,
@@ -2865,7 +2865,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "processes_forks{instance=~\"$instance\"}",
+              "expr": "processes_forks{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "forks",
               "range": true,
@@ -2947,7 +2947,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "uptime{instance=~\"$instance\"}",
+              "expr": "uptime{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "synced",
               "range": true,
@@ -3043,7 +3043,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "clock_synced{instance=~\"$instance\"}",
+              "expr": "clock_synced{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "synced",
               "range": true,
@@ -3138,7 +3138,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "clock_offset{instance=~\"$instance\"}",
+              "expr": "clock_offset{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "offset",
               "range": true,
@@ -3234,7 +3234,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "clock_status{instance=~\"$instance\"}",
+              "expr": "clock_status{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{state}}",
               "range": true,
@@ -3343,7 +3343,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "nfs_io{instance=~\"$instance\"}",
+              "expr": "nfs_io{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -3438,7 +3438,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "nfs_net{instance=~\"$instance\"}",
+              "expr": "nfs_net{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -3533,7 +3533,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "nfs_threads{instance=~\"$instance\"}",
+              "expr": "nfs_threads{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "threads",
               "range": true,
@@ -3628,7 +3628,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "nfs_readcache{instance=~\"$instance\"}",
+              "expr": "nfs_readcache{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -3723,7 +3723,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "nfs_rpc{instance=~\"$instance\"}",
+              "expr": "nfs_rpc{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -3818,7 +3818,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "nfs_proc4{instance=~\"$instance\"}",
+              "expr": "nfs_proc4{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -3913,7 +3913,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "nfs_proc4ops{instance=~\"$instance\"}",
+              "expr": "nfs_proc4ops{hostname=~\"$hostname\"}",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -4026,7 +4026,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_arc_size{instance=~\"$instance\", op=~\"arcsz|target\"}",
+          "expr": "zfs_arc_size{hostname=~\"$hostname\", op=~\"arcsz|target\"}",
           "instant": false,
           "legendFormat": "{{op}}",
           "range": true,
@@ -4122,7 +4122,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_l2_size{instance=~\"$instance\"}",
+          "expr": "zfs_l2_size{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{op}}",
           "range": true,
@@ -4218,7 +4218,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_reads{instance=~\"$instance\"}",
+          "expr": "zfs_reads{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{op}}",
           "range": true,
@@ -4314,7 +4314,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_hits{instance=~\"$instance\"}",
+          "expr": "zfs_hits{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{op}}",
           "range": true,
@@ -4410,7 +4410,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_arc_size_breakdown{instance=~\"$instance\"}",
+          "expr": "zfs_arc_size_breakdown{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{op}}",
           "range": true,
@@ -4506,7 +4506,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_hash_elements{instance=~\"$instance\"}",
+          "expr": "zfs_hash_elements{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "hashes - {{op}}",
           "range": true,
@@ -4602,7 +4602,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_important_ops{instance=~\"$instance\"}",
+          "expr": "zfs_important_ops{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{op}}",
           "range": true,
@@ -4698,7 +4698,7 @@
             "uid": "${DS_MIMIR}"
           },
           "editorMode": "code",
-          "expr": "zfs_hits_rate{instance=~\"$instance\"}",
+          "expr": "zfs_hits_rate{hostname=~\"$hostname\"}",
           "instant": false,
           "legendFormat": "{{op}}",
           "range": true,
@@ -4805,7 +4805,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "disk_io{instance=~\"$instance\", disk=~\"$disk\"}",
+              "expr": "disk_io{hostname=~\"$hostname\", disk=~\"$disk\"}",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -4902,7 +4902,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "abs(disk_io_ops{instance=~\"$instance\", disk=~\"$disk\"})",
+              "expr": "abs(disk_io_ops{hostname=~\"$hostname\", disk=~\"$disk\"})",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -4999,7 +4999,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "disk_io_backlog{instance=~\"$instance\", disk=~\"$disk\"}",
+              "expr": "disk_io_backlog{hostname=~\"$hostname\", disk=~\"$disk\"}",
               "instant": false,
               "legendFormat": "backlog",
               "range": true,
@@ -5011,7 +5011,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "disk_busy{instance=~\"$instance\", disk=~\"$disk\"}",
+              "expr": "disk_busy{hostname=~\"$hostname\", disk=~\"$disk\"}",
               "hide": false,
               "instant": false,
               "legendFormat": "busy",
@@ -5109,7 +5109,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "disk_utilization{instance=~\"$instance\", disk=~\"$disk\"}",
+              "expr": "disk_utilization{hostname=~\"$hostname\", disk=~\"$disk\"}",
               "instant": false,
               "legendFormat": "utilization",
               "range": true,
@@ -5205,7 +5205,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "abs(disk_iotime{instance=~\"$instance\", disk=~\"$disk\"})",
+              "expr": "abs(disk_iotime{hostname=~\"$hostname\", disk=~\"$disk\"})",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -5301,7 +5301,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "disk_await{instance=~\"$instance\", disk=~\"$disk\"}",
+              "expr": "disk_await{hostname=~\"$hostname\", disk=~\"$disk\"}",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -5397,7 +5397,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "abs(disk_io_size{instance=~\"$instance\", disk=~\"$disk\"})",
+              "expr": "abs(disk_io_size{hostname=~\"$hostname\", disk=~\"$disk\"})",
               "instant": false,
               "legendFormat": "{{op}}",
               "range": true,
@@ -5493,7 +5493,7 @@
                 "uid": "${DS_MIMIR}"
               },
               "editorMode": "code",
-              "expr": "disk_qops{instance=~\"$instance\", disk=~\"$disk\"}",
+              "expr": "disk_qops{hostname=~\"$hostname\", disk=~\"$disk\"}",
               "instant": false,
               "legendFormat": "value",
               "range": true,
@@ -5546,15 +5546,15 @@
           "type": "prometheus",
           "uid": "${DS_MIMIR}"
         },
-        "definition": "label_values(uptime{job=\"$job\"},instance)",
+        "definition": "label_values(uptime{job=\"$job\"},hostname)",
         "hide": 0,
         "includeAll": false,
         "multi": false,
-        "name": "instance",
+        "name": "hostname",
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values(uptime{job=\"$job\"},instance)",
+          "query": "label_values(uptime{job=\"$job\"},hostname)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -5570,7 +5570,7 @@
           "type": "prometheus",
           "uid": "${DS_MIMIR}"
         },
-        "definition": "label_values(cpu_usage{instance=\"$instance\", job=\"$job\"},cpu)",
+        "definition": "label_values(cpu_usage{hostname=\"$hostname\", job=\"$job\"},cpu)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
@@ -5578,7 +5578,7 @@
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values(cpu_usage{instance=\"$instance\", job=\"$job\"},cpu)",
+          "query": "label_values(cpu_usage{hostname=\"$hostname\", job=\"$job\"},cpu)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -5594,7 +5594,7 @@
           "type": "prometheus",
           "uid": "${DS_MIMIR}"
         },
-        "definition": "label_values(disk_io{instance=\"$instance\", job=\"$job\"},disk)",
+        "definition": "label_values(disk_io{hostname=\"$hostname\", job=\"$job\"},disk)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
@@ -5602,7 +5602,7 @@
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values(disk_io{instance=\"$instance\", job=\"$job\"},disk)",
+          "query": "label_values(disk_io{hostname=\"$hostname\", job=\"$job\"},disk)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -5618,7 +5618,7 @@
           "type": "prometheus",
           "uid": "${DS_MIMIR}"
         },
-        "definition": "label_values(interface_io{instance=\"$instance\", job=\"$job\"},interface)",
+        "definition": "label_values(interface_io{hostname=\"$hostname\", job=\"$job\"},interface)",
         "hide": 0,
         "includeAll": true,
         "multi": true,
@@ -5626,7 +5626,7 @@
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values(interface_io{instance=\"$instance\", job=\"$job\"},interface)",
+          "query": "label_values(interface_io{hostname=\"$hostname\", job=\"$job\"},interface)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
